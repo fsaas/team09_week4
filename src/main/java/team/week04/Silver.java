@@ -1,4 +1,4 @@
-package team09.week4;
+package team.week04;
 
 public class Silver extends Rank {
 	//private variables

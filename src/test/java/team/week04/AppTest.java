@@ -1,4 +1,4 @@
-package team09.week4;
+package team.week04;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

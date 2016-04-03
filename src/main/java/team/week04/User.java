@@ -1,4 +1,4 @@
-package team09.week4;
+package team.week04;
 
 @SuppressWarnings("serial")
 class NotExistPlanException extends Exception{
