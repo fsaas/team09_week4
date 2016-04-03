@@ -28,9 +28,9 @@ public class User {
 		if(this.lines < 1)
 			this.lines = 1;
 
-		if (rank.compareTo("Gold") == 0) {
+		if (rank.equalsIgnoreCase("Gold")) {
 			this.rank = new Gold();
-		} else if (rank.compareTo("Silver") == 0) {
+		} else if (rank.equalsIgnoreCase("Silver")) {
 			this.rank = new Silver();
 		}else{
 			throw new NotExistPlanException("존재하지 않는 요금제 입니다.");
