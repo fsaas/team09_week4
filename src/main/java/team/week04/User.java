@@ -9,7 +9,7 @@ class NotExistPlanException extends Exception{
 	}
 	
 	@Override
-	public String getMessage(){return this.msg;}
+	public String toString(){return this.msg;}
 }
 
 public class User {
@@ -21,19 +21,17 @@ public class User {
 		//default class
 	}
 
-	public User(float usedRate, int lines, String rank) throws NotExistPlanException {
+	public User(float usedRate, int lines, String rank){
 		this.usedRate = usedRate;
 		this.lines = lines;
 		
 		if(this.lines < 1)
 			this.lines = 1;
-
-		if (rank.equalsIgnoreCase("Gold")) {
+		
+		if ("Gold".equalsIgnoreCase(rank)) {
 			this.rank = new Gold();
-		} else if (rank.equalsIgnoreCase("Silver")) {
+		} else if ("Silver".equalsIgnoreCase(rank)) {
 			this.rank = new Silver();
-		}else{
-			throw new NotExistPlanException("존재하지 않는 요금제 입니다.");
 		}
 	}
 
