@@ -1,11 +1,14 @@
 package team.week04;
 import java.util.Scanner;
+import java.util.logging.Logger;
+
 
 public class Output {
 	//private variables
 	private Scanner scanner;
 	private User user;
 	private Calc calculator;
+	private Logger logger;
 
 	//constructor
 	public Output(){
