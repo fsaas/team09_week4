@@ -14,16 +14,11 @@ public class Output {
 	}
 	
 	//public methods
-	public void OutputBill()
+	public void OutputBill(float givenused, int givenline, String givenplan)
 	{
-		System.out.print("이번달의 총 사용량을 입력해 주십시오: ");
-		float used = this.scanner.nextFloat();
-		
-		System.out.print("사용중인 회선의 총 수를 입력해 주십시오: ");
-		int line = this.scanner.nextInt();
-		
-		System.out.print("사용중인 플랜을 입력해 주십시오: ");
-		String plan = this.scanner.next();
+		float used = givenused;
+		int line = givenline;
+		String plan = givenplan;
 		
 		try{
 			user = new User(used, line, plan);
