@@ -64,5 +64,11 @@ public class AppTest
         tcalc.setUser(new User(1500, 6, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
 
+        tcalc.setUser(new User(300, 3, "Gold"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Gold")));
+        tcalc.setUser(new User(4000, 3, "Silver"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(4000, 3, "Silver")));        
+        tcalc.setUser(new User(300, 0, "Gold"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 0, "Gold")));
     }
 }
