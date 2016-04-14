@@ -23,8 +23,9 @@
     </dependency>
   </dependencies>
 <build>
-<plugins>
-  <plugin>
+ <pluginManagement>  
+ <plugins>
+ <plugin>
   <groupId>org.jacoco</groupId>
   <artifactId>jacoco-maven-plugin</artifactId>
   <version>0.7.6.201602180812</version>
@@ -38,5 +39,5 @@
   </executions>
   </plugin>
   </plugins>
-</build>
+ </pluginManagement></build>
 </project>
