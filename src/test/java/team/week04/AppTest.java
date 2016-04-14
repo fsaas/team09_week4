@@ -31,44 +31,86 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testApp1()
     {
         Calc tcalc = new Calc();
         Output output = new Output();
-        
         tcalc.setUser(new User(30, 2, "Silver"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 2, "Silver")));
-        
-
+    }
+    public void testApp2()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(30, 2, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 2, "Gold")));
-
-        tcalc.setUser(new User(30, 6, "Silver"));
+    }
+    public void testApp3()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
+    	tcalc.setUser(new User(30, 6, "Silver"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 6, "Silver")));
-        
-
+    }
+    public void testApp4()
+    {
+    	
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(30, 6, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 6, "Gold")));
-
-
+    }
+    public void testApp5()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(1500, 3, "Silver"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Silver")));
-
+    	
+    }
+    public void testApp6()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(1500, 3, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Gold")));
-        
-
+    }
+    public void testApp7()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(1500, 6, "Silver"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 6, "Silver")));
-
+    }
+    public void testApp8()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(1500, 6, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 6, "Gold")));
-
+    }
+    
+    public void testApp9()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(300, 3, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Gold")));
+    }
+    public void testApp10()
+    {
+    	Calc tcalc = new Calc();
+        Output output = new Output();
         tcalc.setUser(new User(4000, 3, "Silver"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(4000, 3, "Silver")));        
-        tcalc.setUser(new User(300, 0, "Gold"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(4000, 3, "Silver")));       
+    }
+    
+    
+    public void testApp11()
+    {
+    	Calc tcalc = new Calc();
+    	Output output = new Output();
+    	tcalc.setUser(new User(300, 0, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 0, "Gold")));
     }
 }
