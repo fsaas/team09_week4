@@ -17,10 +17,6 @@ public class User {
 	private int lines;
 	private Rank rank;
 
-	public User() {
-		//default class
-	}
-
 	public User(float usedRate, int lines, String rank){
 		this.usedRate = usedRate;
 		this.lines = lines;
