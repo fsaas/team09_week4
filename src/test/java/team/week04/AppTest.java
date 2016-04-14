@@ -37,32 +37,32 @@ public class AppTest
         Output output = new Output();
         
         tcalc.setUser(new User(30, 2, "Silver"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 2, "Silver")));
         
 
         tcalc.setUser(new User(30, 2, "Gold"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 2, "Silver")));
 
         tcalc.setUser(new User(30, 6, "Silver"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 6, "Silver")));
         
 
         tcalc.setUser(new User(30, 6, "Gold"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(30, 6, "Silver")));
 
 
         tcalc.setUser(new User(1500, 3, "Silver"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Silver")));
 
         tcalc.setUser(new User(1500, 3, "Gold"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Silver")));
         
 
         tcalc.setUser(new User(1500, 6, "Silver"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Silver")));
 
         tcalc.setUser(new User(1500, 6, "Gold"));
-        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(1500, 3, "Silver")));
 
         tcalc.setUser(new User(300, 3, "Gold"));
         assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Gold")));
