@@ -33,10 +33,10 @@ public class AppTest
      */
     public void testApp()
     {
-        Calc t_calc = new Calc();
-        Output output = new Output(300,3,"Silver");
-        t_calc.setUser(new User(300, 3, "Silver"));
+        Calc tcalc = new Calc();
+        Output output = new Output();
         
-        assertEquals(t_calc.calcCharge(), output.calcCharge());
+        tcalc.setUser(new User(300, 3, "Silver"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
     }
 }
