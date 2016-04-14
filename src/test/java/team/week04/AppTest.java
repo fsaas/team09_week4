@@ -35,7 +35,7 @@ public class AppTest
     {
         assertTrue( true );
         Output output = new Output();
-        output.OutputBill(300,3,"Silver");
-        output.OutputBill(25,1,"Silver");
+        output.outputBill(300,3,"Silver");
+        output.outputBill(25,1,"Silver");
     }
 }
