@@ -24,12 +24,7 @@ public class Output {
 		givenline = scanner.nextInt();
 		givenplan = scanner.next();
 		
-		try{
-			user = new User(givenUsed, givenline, givenplan);
-		}catch(Exception e){
-			System.out.println(e);
-			return;
-		}
+		user = new User(givenUsed, givenline, givenplan);
 		
 		this.calculator.setUser(this.user);
 		System.out.println("이번 달의 사용 결과는 아래와 같습니다.");

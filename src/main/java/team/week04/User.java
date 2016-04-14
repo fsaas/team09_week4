@@ -1,17 +1,5 @@
 package team.week04;
 
-@SuppressWarnings("serial")
-class NotExistPlanException extends Exception{
-	private final String msg;
-	
-	public NotExistPlanException(String msg){
-		this.msg = msg;
-	}
-	
-	@Override
-	public String getMessage(){return this.msg;}
-}
-
 public class User {
 	private float usedRate;
 	private int lines;
