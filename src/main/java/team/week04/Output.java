@@ -1,12 +1,12 @@
 package team.week04;
-import java.util.logging.Logger;
 
+import java.util.Scanner;
 
 public class Output {
 	//private variables
+	private Scanner scanner;
 	private User user;
 	private Calc calculator;
-	private Logger logger;
 
 	//constructor
 	public Output(){
@@ -14,14 +14,18 @@ public class Output {
 	}
 	
 	//public methods
-	public void outputBill(float givenused, int givenline, String givenplan)
-	{
-		float used = givenused;
-		int line = givenline;
-		String plan = givenplan;
+	public void outputBill()
+	{		
+		float givenUsed;
+		int givenline;
+		String givenplan;
+		
+		givenUsed = scanner.nextFloat();
+		givenline = scanner.nextInt();
+		givenplan = scanner.next();
 		
 		try{
-			user = new User(used, line, plan);
+			user = new User(givenUsed, givenline, givenplan);
 		}catch(Exception e){
 			System.out.println(e);
 			return;
@@ -32,6 +36,11 @@ public class Output {
 		System.out.println("총 사용량 : " + user.getUsedRate());
 		System.out.println("사용 회선 수 : " + user.getLine());
 		System.out.println("사용중인 플랜 : " + user.getRank());
-		System.out.println("납부하셔야 하는 요금 : " + this.calculator.calcCharge() );
+		System.out.println("납부하셔야 하는 요금 : " + this.calcCharge(user) );
+	}
+	
+	public float calcCharge(User user){
+		this.calculator.setUser(user);
+		return this.calculator.calcCharge();
 	}
 }
