@@ -6,12 +6,4 @@ package team.week04;
  */
 public class App 
 {
-	private App(){
-		//default class
-	}
-	
-    public static void main( String[] args )
-    {
-    	//empty
-    }
 }
