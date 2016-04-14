@@ -33,9 +33,10 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
-        Output output = new Output();
-        output.outputBill(300,3,"Silver");
-        output.outputBill(25,1,"Silver");
+        Calc t_calc = new Calc();
+        Output output = new Output(300,3,"Silver");
+        t_calc.setUser(new User(300, 3, "Silver"));
+        
+        assertEquals(t_calc.calcCharge(), output.calcCharge());
     }
 }
